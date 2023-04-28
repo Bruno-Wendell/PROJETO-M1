@@ -69,6 +69,10 @@ header .container button {
     margin-top: 40px;
 }
 
+header img {
+    display: none;
+}
+
 nav {
     height: var(--menu-height);
     display: flex;
@@ -80,15 +84,65 @@ nav {
     top: 0;
 }
 
-nav img {
+img {
     height: 50px;
+}
+
+nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
 
 nav ul a {
     color: var(--green);
     font-size: 20px;
     text-decoration: none;
-    margin: 0 18px;
+}
+
+nav ul svg {
+    display: none;
+}
+
+@media (max-width:1000px) {
+    header .container{
+        width: 100%;
+    }
+}
+
+@media (max-width:767px) {
+    header .container {
+        width: 100%;
+        padding: 0 30px;
+    }
+
+    nav {
+        padding: 0;
+    }
+
+    nav ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul a {
+        font-size: 16px;
+    }
+
+    nav img {
+        display: none;
+    }
+}
+
+@media (max-width:480px) {
+    nav ul a {
+        font-size: 12px;
+    }
+
+    nav ul svg {
+        display: block;
+        margin: 0 auto 10px;
+    }
 }
 
 section {
